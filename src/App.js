@@ -2,9 +2,11 @@
 import { Route, Routes } from 'react-router-dom';
 import About from './About/About';
 import './App.css';
-import Login from './Login/Login';
+
 import Appointment from './Pages/Appointment/Appointment';
 import Home from './Pages/Home/Home/Home';
+import Login from './Pages/Login/Login';
+import SignUp from './Pages/Login/SignUp';
 import Navbar from './Pages/shared/Navbar/Navbar';
 import NotFound from './Pages/shared/NotFound/NotFound';
 
@@ -17,7 +19,7 @@ function App() {
         <Route path='/home' element={<Home />}></Route>
         <Route path='/about' element={<About />}></Route >
         <Route path='/login' element={<Login />}></Route>
-        <Route path='/contact' element={<Login />}></Route>
+        <Route path='/signup' element={<SignUp />}></Route>
         <Route path='/review' element={<Login />}></Route>
         <Route path='/appointment' element={<Appointment />}></Route>
         <Route path='*' element={<NotFound />}></Route>
