@@ -6,8 +6,8 @@ const Footer = () => {
         <footer style={{
             background: `url(${footer})`,
             backgroundSize: 'cover'
-        }} className="p-10">
-            <div className='footer'>
+        }} className=" container mx-auto p-10">
+            <div className='footer '>
                 <div>
                     <span className="footer-title">Services</span>
                     <a href="https://web.programming-hero.com/" className="link link-hover">Branding</a>
