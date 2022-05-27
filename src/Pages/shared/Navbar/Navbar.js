@@ -18,6 +18,10 @@ const Navbar = () => {
             <li><Link to='/review' href="#2">Reviews</Link></li>
             <li><Link to='/contact' href="#2">Contact Us</Link></li>
             <li><Link to='/about' href="#2">About </Link></li>
+
+            {
+                user && <li><Link to='/dashboard' className=" text-black text-decoration-none"> Dashboard</Link></li>
+            }
             {
                 user ?
                     <button onClick={handleSignOut} className="btn btn-primary text-white text-decoration-none"> Sign Out</button>
@@ -47,6 +51,11 @@ const Navbar = () => {
                         {menuItems}
                     </ul >
                 </div >
+                <div className="navbar-end">
+                    <label tabIndex="1" for="dashboard-sidebar" className="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </label >
+                </div>
 
             </div >
         </div >

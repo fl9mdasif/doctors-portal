@@ -10,6 +10,11 @@ import NotFound from './Pages/shared/NotFound/NotFound';
 import PrivateAuth from './Pages/Login/PrivateAuth';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Dashboard from './Pages/Dashboard/Dashboard';
+import MyAppointment from './Pages/Dashboard/MyAppointment';
+import MyReviews from './Pages/Dashboard/MyReviews';
+import Myhistory from './Pages/Dashboard/Myhistory';
+
 
 function App() {
   return (
@@ -21,6 +26,18 @@ function App() {
         <Route path='/about' element={<About />}></Route >
         <Route path='/login' element={<Login />}></Route>
         <Route path='/signup' element={<SignUp />}></Route>
+
+        {/* //nested route */}
+        <Route path='/dashboard' element={
+          <PrivateAuth>
+            <Dashboard />
+          </PrivateAuth>
+        }>
+          <Route index element={<MyAppointment />}></Route>
+          <Route path="review" element={<MyReviews />}></Route>
+          <Route path='history' element={<Myhistory />}></Route>
+        </Route>
+
         <Route path='/review' element={<Login />}></Route>
         <Route path='/appointment' element={
           <PrivateAuth>
